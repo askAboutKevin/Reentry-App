@@ -142,25 +142,25 @@ class HomePage extends React.Component {
 
   carousel = () => {
     return (
-      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="10000">
-            <img src={img1} class="d-block w-100" alt="..." />
+      <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel">
+        <div className="carousel-inner" style={{height: "520px"}}>
+          <div className="carousel-item active" data-interval="10000">
+            <img src={img1} className="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src={img2} class="d-block w-100" alt="..." />
+          <div className="carousel-item" data-interval="2000">
+            <img src={img2} className="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item">
-            <img src={img3} class="d-block w-100" alt="..." />
+          <div className="carousel-item">
+            <img src={img3} className="d-block w-100" alt="..." />
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+        <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+        <a className="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
         </a>
       </div>
     );
@@ -384,13 +384,19 @@ class HomePage extends React.Component {
     const {displayEmployer} = this.state;
     return (
       <div>
-        <div>The First Step is Reentry</div>
+        <br />
+        <div><h2>The First Step is Reentry</h2></div>
+        <br />
         {this.carousel()}
-        <button type="button"className="" onClick={(event) => this.setState({displaySeeker: true})}>Seeker</button>
-        {displaySeeker && this.seekerForm()}
-        <button type="button"className="" onClick={(event) => this.setState({displayEmployer: true})}>Employers</button>
-        {displayEmployer && this.employerForm()}
         <br /><br /><br />
+        <div>
+          <button type="button"className="" onClick={(event) => this.setState({displaySeeker: true})}>Seeker</button>
+          {displaySeeker && this.seekerForm()}
+          <button type="button"className="" onClick={(event) => this.setState({displayEmployer: true})}>Employers</button>
+          {displayEmployer && this.employerForm()}
+        </div>
+        <br /><br /><br />
+        <br />
       </div>
     );
   }

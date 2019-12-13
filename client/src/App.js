@@ -211,9 +211,9 @@ class App extends React.Component {
 //     );
 //   }
 
-//   changeNavigation = () => {
+  changeNavigation = () => {
 
-//   }
+  }
 
   render() {
     const { seekerNav } = this.state
@@ -224,8 +224,8 @@ class App extends React.Component {
           { normalNav && this.Navigation() }
           { employerNav && this.SeekerNavigation() }
           { seekerNav && this.EmployerNavigation() }
-          <div className="row container-fluid text-center">
-            <div className=" col-sm justify-content-center" style={{width: '90%'}}>
+          <div className="">
+            <div className="text-center" style={{width: '70%', margin : "auto"}}>
               <Switch>
                 <Route exact path="/" component={HomePage} />     
                 <Route path="/login" component={LoginPage} />
