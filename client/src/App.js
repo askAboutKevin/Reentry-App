@@ -12,6 +12,7 @@ import CandidatesPage from './pages/CandidatesPage';
 import AboutUsPage from './pages/AboutUsPage';
 import JobBoard from './pages/JobBoardPage';
 import LoginPage from './pages/LoginPage';
+import MissionPage from './pages/MissionPage';
 import PrivateRoute from './components/PrivateRoute';
 import AuthButton from './components/AuthButton';
 import './App.css';
@@ -90,21 +91,27 @@ class App extends React.Component {
           </Navbar.Brand>
         </Link>
         <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+            <NavLink className="nav-link" exact to="/mission">
+              Our Mission
+            </NavLink>
+          </li>
           <li className="nav-item">
             <NavLink className="nav-link" exact to="/jobs">
               Jobs
             </NavLink>
           </li>
-          <li>
-            <NavLink className="nav-link" exact to="/news">
-              News
-            </NavLink>
-          </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/mission">
-              Our Mission
+            <NavLink className="nav-link" exact to="/candidates">
+              Candidates
             </NavLink>
           </li>
+          <li>
+            <NavLink className="nav-link" exact to="/about-us">
+              About Us
+            </NavLink>
+          </li>
+          
         </ul>
         <AuthButton />
       </nav>
@@ -230,6 +237,7 @@ class App extends React.Component {
                 <Route exact path="/" component={HomePage} />     
                 <Route path="/login" component={LoginPage} />
                 <Route path="/about-us" component={AboutUsPage} />
+                <Route path="/mission" component={MissionPage} />
                 <Route path="/candidates" component={CandidatesPage} />
                 <PrivateRoute path="/jobs" component={JobBoard} />
                 <PrivateRoute path="/create-job" component={CandidatesPage} />
