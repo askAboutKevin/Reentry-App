@@ -2,6 +2,7 @@ import React from 'react';
 import Candidate from '../components/Candidate';
 import Loading from '../components/Loading';
 import { Redirect } from 'react-router-dom';
+import {Card, CardDeck,Button,CardBody,CardTitle,CardText, Row, Col, CardLink} from 'reactstrap'
 
 class CandidatesPage extends React.Component {
   state = {
@@ -47,13 +48,136 @@ class CandidatesPage extends React.Component {
     if(this.state.notFound) return <Redirect to="/" />;
     if(this.state.loading) return <Loading />;
     console.log(this.state.post);
-    return this.state.posts;
+    // return this.state.posts;
     
-    // return (
-    //   <div>
-    //     <h1>Our Candidates</h1>
-    //   </div>
-    // )
+    return (
+      <div>
+        <h1>Our Candidates</h1>
+        <CardDeck>
+        <Row>
+      <Col sm="6">
+          
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Bernie!
+               </CardTitle>
+               <CardText>
+                   I'm from NY, NY 10075.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="madeoffmymoney.org"></CardLink>madeoffmymoney.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Bernie</Button>
+
+       </Card>
+       </Col>
+
+       <Col sm="6">
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Fiona!
+               </CardTitle>
+               <CardText>
+                   I'm from NY, NY 10001.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="riverroomsouth.org"> </CardLink>riverroomsouth.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Fiona</Button>
+
+       </Card>
+       </Col>
+
+       <Col sm="6">
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Freddie!
+               </CardTitle>
+               <CardText>
+                   I'm from Arverne, NY 11692.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="rockawayymca.org"></CardLink>rockawayymca.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Freddie</Button>
+
+       </Card>
+       </Col>
+       <Col sm="6">
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Joe!
+               </CardTitle>
+               <CardText>
+                   I'm from NY, NY 10017.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="joeschmoe.org"></CardLink>joeschmoe.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Joe</Button>
+
+       </Card>
+       </Col>
+       <Col sm="6">
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Reddington!
+               </CardTitle>
+               <CardText>
+                   I'm from NY, NY 10036.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="ciablacklist.org"></CardLink>ciablacklist.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Reddington</Button>
+
+       </Card>
+       </Col>
+       <Col sm="6">
+       <Card >
+           <CardBody>
+               <CardTitle>
+                   Meet Peter!
+               </CardTitle>
+               <CardText>
+                   I'm from Atlanta, GA 30318.
+
+               </CardText>
+               <CardText>
+               My resume can be found here: <CardLink href="petesresume.org"></CardLink>petesresume.org.
+               </CardText>
+           </CardBody>
+           <Button color="primary">Message Peter</Button>
+
+       </Card>
+       </Col>
+
+
+       
+       </Row>
+       
+
+       </CardDeck>
+       <br/>
+       <br/>
+       <br/>
+      </div>
+    )
   }
 }
 
