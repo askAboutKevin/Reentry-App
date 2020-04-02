@@ -1,6 +1,11 @@
 # Reenter App
 
-Web application to connect formerly incarcerated individuals to resources and opportunities that will 
+Web application to connect formerly incarcerated individuals to resources and opportunities that will aid in job placement.
+
+Our Team:
+Kevin Dowdy
+Genna Lipkin
+Ayodele Farinre
 ## Stack
 
 *API*
@@ -15,15 +20,6 @@ Web application to connect formerly incarcerated individuals to resources and op
 - React Router
 
 *Project Structure*
-
-## Dev Setup
-
-Each team member will need to do this on their local machine.
-
-### Database
-
-User: `ctp_user`
-Password: `ctp_pass`:
 
 ### Running the app
 
