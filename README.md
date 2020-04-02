@@ -3,9 +3,7 @@
 Web application to connect formerly incarcerated individuals to resources and opportunities that will aid in job placement.
 
 Our Team:
-Kevin Dowdy
-Genna Lipkin
-Ayodele Farinre
+Kevin Dowdy, Genna Lipkin, & Ayodele Farinre
 ## Stack
 
 *API*
